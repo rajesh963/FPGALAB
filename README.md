@@ -3,4 +3,4 @@
 This is the repository for EE5811 FPGA LAB
 
 1) Assignment1: To draw a logic circuit using NAND gates only and which results in expression XY+YZ. <br />
-Youtube Link: https://www.youtube.com/watch?v=Mrz01NNQPpU
+Youtube Link: 
