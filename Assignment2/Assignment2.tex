@@ -1,1 +1,62 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Ass2}
+\author{Venkata Sai Rajesh Malladi}
+\date{FPGA Assignment-2}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+We have to perform the problem presented in Assignment-1 on arduino and verify the output.
+
+\section{Code}
+
+\begin{verbatim}
+#include <Arduino.h>
+
+#define X 2
+#define Y 3
+#define Z 4
+#define O 13
+
+int x,y,z, temp,temp1, output;
+
+void setup() {
+
+	pinMode(O, OUTPUT);
+	pinMode(X, INPUT);
+	pinMode(Y, INPUT);
+	pinMode(Z,INPUT);
+	
+}
+
+void loop() {
+    x = digitalRead(X);
+    y = digitalRead(Y);
+    z = digitalRead(Z);
+
+    temp=!(x&&y);
+    temp1=!(y&&z);
+    output = !(temp && temp1);
+    
+    if(output == 1)
+	    digitalWrite(O, HIGH);
+    else
+	    digitalWrite(O, LOW);
+}
+
+\end{verbatim}
+
+\section{Result}
+
+\begin{verbatim}
+Watch result in the link provided: 
+In the video we can see that the code is working as expected.
+\end{verbatim}
+
+\end{document}
 
