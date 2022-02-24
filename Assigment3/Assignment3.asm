@@ -63,7 +63,7 @@ loop:
     out PortB,r21
 
     ldi r19, $32
-    ;rcall DELAY
+    rcall DELAY
 
     rjmp loop
 
