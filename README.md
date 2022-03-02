@@ -6,7 +6,7 @@ This is the repository for EE5811 FPGA LAB
 Youtube Link: https://www.youtube.com/watch?v=N9i-PIhAIP8&t=1s
 
 2) Assignment2: To implement Assignment1 in arduino framework <br />
-<br />
+
 3) Assignment 3: To implement Assignment1 in avr assembly
 
 
