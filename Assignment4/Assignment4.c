@@ -4,28 +4,30 @@
 
 int main (void)
 {
-
-
-  /* Arduino boards have a LED at PB5 */
- //set PB5, pin 13 of arduino as output
   DDRB    |= ((1 << DDB5));
   while (1) {
-unsigned char  Z=0x01,Y=0x00,X=0x00;//inputs in hex
+unsigned char G;
+    unsigned char X[8] = { 0x00, 0x00, 0x00, 0x00, 0x01, 0x01, 0x01, 0x01};
+    unsigned char Y[8] = { 0x00, 0x00, 0x01, 0x01, 0x00, 0x00, 0x01, 0x01};
+    unsigned char Z[8] = { 0x00, 0x01, 0x00, 0x01, 0x00, 0x01, 0x00, 0x01};
 
-unsigned char one = 0x01;//used for displaying the output in bit
-unsigned char A,B,O;//outputs
 
-A=~(X&Y);
-B=~(Y&Z);
-O=~(A&B);
+
+    for (int i = 0; i < 8; i++) {
+        // Using Nand Logic
+        int p= !(X[i]&&Y[i]);
+        int q= !(Z[i]&&Y[i]);
+        int O=!(p&&q);
+
 if(O==0) {
     PORTB = ((0 <<  PB5));}
 else{PORTB = ((1 <<  PB5));}
-    
+    _delay_ms(1000);
     }
+  }
 
-  /* . */
   return 0;
 
 }
+
 
