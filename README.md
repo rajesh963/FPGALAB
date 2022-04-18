@@ -9,7 +9,11 @@ Youtube Link: https://www.youtube.com/watch?v=N9i-PIhAIP8&t=1s
 
 3) Assignment 3: To implement Assignment1 in avr assembly <br />
 
-4) Assignment 4: To implement Assignment in avr gcc <br />
+4) Assignment 4: To implement Assignment1 in avr gcc <br />
+
+5) Assignment 5: To implement Assignment1 in Vaman board on FPGA using verilog <br />
+
+6) Assignment 6: To implement Assignment1 in Vaman board on Arm <br />
 
 
 
